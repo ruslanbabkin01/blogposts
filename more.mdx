@@ -1,12 +1,20 @@
 ---
-title: 'When to Use Static Generation vs. Server-side Rendering'
-date: '2023-07-11'
-tags: ['next.js', 'nextjs', 'ssg', 'ssr']
+title: 'Just Testing'
+date: '2023-07-21'
+tags: ['next.js', 'nextjs', 'new']
 ---
 
 We recommend using **Static Generation** (with and without data) whenever
 possible because your page can be built once and served by CDN, which makes it
 much faster than having a server render the page on every request.
+
+```ts
+const sum = (num1: number, num2: number): number => {
+  return num1 + num2
+}
+
+console.log(sum(4, 8)) //12
+```
 
 You can use Static Generation for many types of pages, including:
 
@@ -17,11 +25,6 @@ You can use Static Generation for many types of pages, including:
 
 You should ask yourself: "Can I pre-render this page **ahead** of a user's
 request?" If the answer is yes, then you should choose Static Generation.
-
-<CustomImage
-  src='https://raw.githubusercontent.com/ruslanbabkin01/blogposts/main/images/ssg-benefits.PNG'
-  alt='ChatGPT provides the benefits of Static-Site Generation'
-/>
 
 On the other hand, Static Generation is **not** a good idea if you cannot
 pre-render a page ahead of a user's request. Maybe your page shows frequently
